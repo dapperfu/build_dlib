@@ -15,5 +15,10 @@ pipeline {
         }
       }
     }
+    stage('Clone dlib') {
+      steps {
+        git(url: 'https://github.com/davisking/dlib.git', branch: 'master', changelog: true, poll: true)
+      }
+    }
   }
 }
