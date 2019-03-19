@@ -25,5 +25,10 @@ pipeline {
         sh 'rm -rf build; mkdir build; cd build; cmake .. -DUSE_AVX_INSTRUCTIONS=1; cmake --build .'
       }
     }
+    stage('Build python library') {
+      steps {
+        sh 'python3 setup.py build'
+      }
+    }
   }
 }
