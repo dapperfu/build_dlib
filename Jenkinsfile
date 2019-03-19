@@ -31,4 +31,7 @@ pipeline {
       }
     }
   }
+  environment {
+    CUDA_PATH = '/usr/local/cuda-10.1'
+  }
 }
